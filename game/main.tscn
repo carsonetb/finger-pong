@@ -1,11 +1,14 @@
-[gd_scene load_steps=20 format=3 uid="uid://dpgwdj6kyi1sq"]
+[gd_scene load_steps=23 format=3 uid="uid://dpgwdj6kyi1sq"]
 
 [ext_resource type="Script" uid="uid://cc41hyx06tsk0" path="res://game/main.gd" id="1_ig7tw"]
 [ext_resource type="Texture2D" uid="uid://bb7li4qkegdcl" path="res://wood_texture/2K/Poliigon_WoodVeneerOak_7760_BaseColor.jpg" id="4_5un7r"]
-[ext_resource type="PackedScene" uid="uid://cqhw276realc" path="res://addons/godot-xr-tools/functions/function_pointer.tscn" id="4_xkbyp"]
+[ext_resource type="PackedScene" uid="uid://crrq68glw1gxb" path="res://game/left_hand_tracker.tscn" id="4_g6fv7"]
 [ext_resource type="Texture2D" uid="uid://8tstciu7kv64" path="res://wood_texture/2K/Poliigon_WoodVeneerOak_7760_Normal.png" id="5_dgpao"]
+[ext_resource type="PackedScene" uid="uid://dgxbs5rv6cl0s" path="res://game/right_hand_tracker.tscn" id="5_frwyw"]
 [ext_resource type="ArrayMesh" uid="uid://bsmoqmg4f1nfv" path="res://game/models/table/full_mesh.tres" id="5_itumj"]
 [ext_resource type="PackedScene" uid="uid://csdmgpladhhw6" path="res://game/paddle/paddle.tscn" id="6_dgpao"]
+[ext_resource type="PackedScene" uid="uid://cd1xpgx1x3p57" path="res://game/left_controller.tscn" id="6_yyxey"]
+[ext_resource type="PackedScene" uid="uid://du4oqotisc0nf" path="res://game/right_controller.tscn" id="7_tv0fx"]
 [ext_resource type="PackedScene" uid="uid://ceg641vg23o0m" path="res://game/models/headset.glb" id="7_wjctj"]
 [ext_resource type="PackedScene" uid="uid://clujaf3u776a3" path="res://addons/godot-xr-tools/objects/viewport_2d_in_3d.tscn" id="9_lx3aj"]
 [ext_resource type="PackedScene" uid="uid://bcn6yfrw8rfco" path="res://game/ball/ball.tscn" id="10_dp3pf"]
@@ -49,38 +52,28 @@ environment = SubResource("Environment_wjctj")
 
 [node name="Origin" type="XROrigin3D" parent="."]
 
-[node name="OpenXRRenderModelManager" type="OpenXRRenderModelManager" parent="Origin"]
-tracker = 2
-make_local_to_pose = "pos"
-
 [node name="XRCamera3D" type="XRCamera3D" parent="Origin"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.3796642, 0)
 
-[node name="LeftPaddle" parent="Origin" node_paths=PackedStringArray("affiliated_controller") instance=ExtResource("6_dgpao")]
+[node name="LeftPaddle" parent="Origin" instance=ExtResource("6_dgpao")]
 enabled = false
-affiliated_controller = NodePath("../LeftHand")
 
-[node name="RightPaddle" parent="Origin" node_paths=PackedStringArray("affiliated_controller") instance=ExtResource("6_dgpao")]
-affiliated_controller = NodePath("../RightHand")
-
-[node name="LeftHand" type="XRController3D" parent="Origin"]
-tracker = &"left_hand"
-pose = &"pos"
-
-[node name="FunctionPointer" parent="Origin/LeftHand" instance=ExtResource("4_xkbyp")]
-active_button_action = "select"
-show_laser = 2
-laser_length = 1
-
-[node name="RightHand" type="XRController3D" parent="Origin"]
-tracker = &"right_hand"
-pose = &"pos"
+[node name="RightPaddle" parent="Origin" instance=ExtResource("6_dgpao")]
 
 [node name="MyArea" type="Area3D" parent="Origin"]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Origin/MyArea"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.8569489, -1.4487419, 0.96429443)
 shape = SubResource("BoxShape3D_itumj")
+
+[node name="LeftHandTracker" parent="Origin" instance=ExtResource("4_g6fv7")]
+
+[node name="RightHandTracker" type="XRNode3D" parent="Origin" instance=ExtResource("5_frwyw")]
+tracker = &"/user/hand_tracker/right"
+
+[node name="LeftController" parent="Origin" instance=ExtResource("6_yyxey")]
+
+[node name="RightController" parent="Origin" instance=ExtResource("7_tv0fx")]
 
 [node name="Table" type="StaticBody3D" parent="."]
 physics_material_override = SubResource("PhysicsMaterial_itumj")

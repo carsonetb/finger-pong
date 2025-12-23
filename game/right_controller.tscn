@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://du4oqotisc0nf"]
+
+[ext_resource type="Script" path="res://game/raycast.gd" id="1_udteh"]
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_d5lax"]
+top_radius = 0.005
+bottom_radius = 0.005
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_k6edk"]
+
+[node name="RightController" type="XRController3D"]
+tracker = &"/user/fbhandaim/right"
+
+[node name="RayCast3D" type="RayCast3D" parent="."]
+visible = false
+target_position = Vector3(0, 0, -10)
+script = ExtResource("1_udteh")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="RayCast3D"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0)
+mesh = SubResource("CylinderMesh_d5lax")
+surface_material_override/0 = SubResource("StandardMaterial3D_k6edk")

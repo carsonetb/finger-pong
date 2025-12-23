@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://b6rot2ijgki43"
 path.s3tc="res://.godot/imported/inner_padding_baseColor.png-ac159b93db0e9fd843759aff6c87103d.s3tc.ctex"
+path.etc2="res://.godot/imported/inner_padding_baseColor.png-ac159b93db0e9fd843759aff6c87103d.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://game/paddle/model/textures/inner_padding_baseColor.png"
-dest_files=["res://.godot/imported/inner_padding_baseColor.png-ac159b93db0e9fd843759aff6c87103d.s3tc.ctex"]
+dest_files=["res://.godot/imported/inner_padding_baseColor.png-ac159b93db0e9fd843759aff6c87103d.s3tc.ctex", "res://.godot/imported/inner_padding_baseColor.png-ac159b93db0e9fd843759aff6c87103d.etc2.ctex"]
 
 [params]
 

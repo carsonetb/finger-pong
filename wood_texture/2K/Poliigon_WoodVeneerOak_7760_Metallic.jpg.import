@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://damsscjcb85xm"
 path.s3tc="res://.godot/imported/Poliigon_WoodVeneerOak_7760_Metallic.jpg-4254ade6661466bd70ffe4bfb5715c3f.s3tc.ctex"
+path.etc2="res://.godot/imported/Poliigon_WoodVeneerOak_7760_Metallic.jpg-4254ade6661466bd70ffe4bfb5715c3f.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://wood_texture/2K/Poliigon_WoodVeneerOak_7760_Metallic.jpg"
-dest_files=["res://.godot/imported/Poliigon_WoodVeneerOak_7760_Metallic.jpg-4254ade6661466bd70ffe4bfb5715c3f.s3tc.ctex"]
+dest_files=["res://.godot/imported/Poliigon_WoodVeneerOak_7760_Metallic.jpg-4254ade6661466bd70ffe4bfb5715c3f.s3tc.ctex", "res://.godot/imported/Poliigon_WoodVeneerOak_7760_Metallic.jpg-4254ade6661466bd70ffe4bfb5715c3f.etc2.ctex"]
 
 [params]
 

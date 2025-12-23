@@ -15,15 +15,28 @@ run/main_scene="uid://dpgwdj6kyi1sq"
 config/features=PackedStringArray("4.5", "Mobile")
 config/icon="res://icon.svg"
 
+[autoload]
+
+Global="*res://game/singleton/global.gd"
+XR="*res://game/singleton/xr.gd"
+Util="*res://game/singleton/util.gd"
+Log="*res://addons/logger/logger.gd"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/logger/plugin.cfg")
+
 [rendering]
 
 renderer/rendering_method="mobile"
+textures/vram_compression/import_etc2_astc=true
 
 [xr]
 
 openxr/enabled=true
+openxr/reference_space=2
 openxr/extensions/hand_tracking=true
-openxr/extensions/hand_tracking_unobstructed_data_source=true
-openxr/extensions/hand_interaction_profile=true
-openxr/extensions/render_model=true
 shaders/enabled=true
+openxr/extensions/meta/hand_tracking_aim=true
+openxr/extensions/meta/hand_tracking_mesh=true
+openxr/extensions/meta/hand_tracking_capsules=true

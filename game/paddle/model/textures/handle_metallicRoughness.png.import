@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://xrydw6j10a66"
 path.s3tc="res://.godot/imported/handle_metallicRoughness.png-3519b5119bf07a7fc030756c6fb38c42.s3tc.ctex"
+path.etc2="res://.godot/imported/handle_metallicRoughness.png-3519b5119bf07a7fc030756c6fb38c42.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://game/paddle/model/textures/handle_metallicRoughness.png"
-dest_files=["res://.godot/imported/handle_metallicRoughness.png-3519b5119bf07a7fc030756c6fb38c42.s3tc.ctex"]
+dest_files=["res://.godot/imported/handle_metallicRoughness.png-3519b5119bf07a7fc030756c6fb38c42.s3tc.ctex", "res://.godot/imported/handle_metallicRoughness.png-3519b5119bf07a7fc030756c6fb38c42.etc2.ctex"]
 
 [params]
 

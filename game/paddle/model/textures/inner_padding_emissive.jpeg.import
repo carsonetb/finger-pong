@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://dhy00my1igsue"
 path.s3tc="res://.godot/imported/inner_padding_emissive.jpeg-31e490a315cac217288a0039251b0eef.s3tc.ctex"
+path.etc2="res://.godot/imported/inner_padding_emissive.jpeg-31e490a315cac217288a0039251b0eef.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://game/paddle/model/textures/inner_padding_emissive.jpeg"
-dest_files=["res://.godot/imported/inner_padding_emissive.jpeg-31e490a315cac217288a0039251b0eef.s3tc.ctex"]
+dest_files=["res://.godot/imported/inner_padding_emissive.jpeg-31e490a315cac217288a0039251b0eef.s3tc.ctex", "res://.godot/imported/inner_padding_emissive.jpeg-31e490a315cac217288a0039251b0eef.etc2.ctex"]
 
 [params]
 

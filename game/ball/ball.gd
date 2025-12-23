@@ -15,12 +15,13 @@ var target_pos: Vector3
 
 func _ready() -> void:
 	Global.ball = self
-	Networking.lobby_joined.connect(_on_lobby_joined)
+	#Networking.lobby_joined.connect(_on_lobby_joined)
 	detection_area.area_exited.connect(_on_detection_area_exited)
 
 func _process(_delta: float) -> void:
 	if ball_owner:
-		Networking.call_remote_function(self, "_remote_update_ball_posrot", [position, rotation])
+		pass
+		#Networking.call_remote_function(self, "_remote_update_ball_posrot", [position, rotation])
 
 func _physics_process(delta: float) -> void:
 	if freeze && !attached_to_paddle:
@@ -42,14 +43,14 @@ func _integrate_forces(state: PhysicsDirectBodyState3D) -> void:
 		state.angular_velocity = angvel_to_override
 
 func _on_detection_area_exited(area: Area3D) -> void:
-	if area.name == "MyArea" && Networking.networking_enabled:
-		Networking.call_remote_function(self, "_remote_transfer_ownership", [global_position, global_rotation, linear_velocity, angular_velocity])
+	if area.name == "MyArea": # && Networking.networking_enabled:
+		#Networking.call_remote_function(self, "_remote_transfer_ownership", [global_position, global_rotation, linear_velocity, angular_velocity])
 		target_pos = global_position
 		ball_owner = false
 		freeze = true
 
 func _on_lobby_joined() -> void:
-	if Networking.is_lobby_owner:
+	#if Networking.is_lobby_owner:
 		ball_owner = false
 		freeze = true
 		position = Vector3(1000, 1000, 1000) # Until we are respawned

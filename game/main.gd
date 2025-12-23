@@ -23,7 +23,7 @@ func _ready() -> void:
 	Global.primary_paddle = $Origin/RightHand
 	Global.secondary_paddle = $Origin/LeftHand
 	Global.main_world = self
-	Networking.lobby_joined.connect(_on_lobby_joined)
+	#Networking.lobby_joined.connect(_on_lobby_joined)
 
 func _process(_delta: float) -> void:
 	other_head.global_position = lerp(other_head.global_position, other_head_target, 0.5)

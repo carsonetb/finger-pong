@@ -10,8 +10,8 @@ var ball_spawned: bool = false
 
 func _ready() -> void:
 	await get_tree().process_frame
-	Global.secondary_paddle.button_pressed.connect(_primary_controller_button_pressed)
-	Global.secondary_paddle.button_released.connect(_primary_controller_button_released)
+	#Global.secondary_paddle.button_pressed.connect(_primary_controller_button_pressed)
+	#Global.secondary_paddle.button_released.connect(_primary_controller_button_released)
 	
 func _physics_process(delta: float) -> void:
 	$CollisionShape3D1.disabled = !enabled
@@ -33,7 +33,7 @@ func _primary_controller_button_pressed(button: String) -> void:
 		Global.ball.global_position = affiliated_controller.global_position
 		Global.ball.linear_velocity = Vector3.ZERO
 		Global.ball.angular_velocity = Vector3.ZERO
-		Networking.call_remote_function(Global.ball, "_remote_transfer_ownership", [Global.ball.global_position, Global.ball.global_rotation, Global.ball.linear_velocity, Global.ball.angular_velocity])
+		#Networking.call_remote_function(Global.ball, "_remote_transfer_ownership", [Global.ball.global_position, Global.ball.global_rotation, Global.ball.linear_velocity, Global.ball.angular_velocity])
 
 func _primary_controller_button_released(button: String) -> void:
 	if button == "reset_ball" && ball_spawned && !enabled && affiliated_controller:

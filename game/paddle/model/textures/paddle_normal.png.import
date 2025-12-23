@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://bpohvj4lnqyfr"
 path.s3tc="res://.godot/imported/paddle_normal.png-60b402770744a4c4e4eca3a8649e4c34.s3tc.ctex"
+path.etc2="res://.godot/imported/paddle_normal.png-60b402770744a4c4e4eca3a8649e4c34.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://game/paddle/model/textures/paddle_normal.png"
-dest_files=["res://.godot/imported/paddle_normal.png-60b402770744a4c4e4eca3a8649e4c34.s3tc.ctex"]
+dest_files=["res://.godot/imported/paddle_normal.png-60b402770744a4c4e4eca3a8649e4c34.s3tc.ctex", "res://.godot/imported/paddle_normal.png-60b402770744a4c4e4eca3a8649e4c34.etc2.ctex"]
 
 [params]
 

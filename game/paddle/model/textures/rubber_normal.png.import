@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://ef0dildal0ib"
 path.s3tc="res://.godot/imported/rubber_normal.png-c30a0a67d9ce35da09ef96b8ad7ac5e7.s3tc.ctex"
+path.etc2="res://.godot/imported/rubber_normal.png-c30a0a67d9ce35da09ef96b8ad7ac5e7.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://game/paddle/model/textures/rubber_normal.png"
-dest_files=["res://.godot/imported/rubber_normal.png-c30a0a67d9ce35da09ef96b8ad7ac5e7.s3tc.ctex"]
+dest_files=["res://.godot/imported/rubber_normal.png-c30a0a67d9ce35da09ef96b8ad7ac5e7.s3tc.ctex", "res://.godot/imported/rubber_normal.png-c30a0a67d9ce35da09ef96b8ad7ac5e7.etc2.ctex"]
 
 [params]
 
